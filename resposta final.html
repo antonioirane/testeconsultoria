@@ -1,0 +1,5177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+  Portal Executivo BPM — Concreto
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+
+:root{
+
+  --bg:#f4f6f9;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --primary:#0f172a;
+  --blue:#2563eb;
+
+  font-family:'Inter',sans-serif;
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* =====================================================
+NAVBAR
+===================================================== */
+
+.navbar{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  background:rgba(255,255,255,.92);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid var(--border);
+
+  z-index:999;
+
+}
+
+.nav-container{
+
+  max-width:1600px;
+
+  margin:auto;
+
+  padding:18px 30px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:20px;
+
+}
+
+.logo{
+
+  font-size:18px;
+
+  font-weight:800;
+
+  color:var(--primary);
+
+}
+
+.menu{
+
+  display:flex;
+
+  gap:22px;
+
+  flex-wrap:wrap;
+
+}
+
+.menu a{
+
+  text-decoration:none;
+
+  color:#475569;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  transition:.2s;
+
+}
+
+.menu a:hover{
+
+  color:var(--blue);
+
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+
+  padding:150px 30px 100px;
+
+  background:linear-gradient(
+    135deg,
+    #071026,
+    #0f172a
+  );
+
+  color:white;
+
+}
+
+.hero-content{
+
+  max-width:1600px;
+
+  margin:auto;
+
+}
+
+.badge{
+
+  display:inline-flex;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.08);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.7px;
+
+  margin-bottom:28px;
+
+  text-transform:uppercase;
+
+}
+
+.hero h1{
+
+  font-size:52px;
+
+  line-height:1.1;
+
+  margin-bottom:24px;
+
+  max-width:1000px;
+
+}
+
+.hero p{
+
+  max-width:950px;
+
+  font-size:19px;
+
+  line-height:1.9;
+
+  color:#cbd5e1;
+
+}
+
+/* =====================================================
+SUMMARY
+===================================================== */
+
+.summary{
+
+  margin-top:60px;
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:28px;
+
+  padding:40px;
+
+  max-width:1200px;
+
+}
+
+.summary h2{
+
+  margin-bottom:22px;
+
+  font-size:34px;
+
+}
+
+.summary p{
+
+  color:#cbd5e1;
+
+  line-height:2;
+
+  font-size:17px;
+
+}
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+.section{
+
+  padding:60px 24px;
+
+}
+
+.container{
+
+  max-width:1600px;
+
+  margin:auto;
+
+}
+
+.section-title{
+
+  margin-bottom:35px;
+
+}
+
+.section-title h2{
+
+  font-size:40px;
+
+  margin-bottom:14px;
+
+}
+
+.section-title p{
+
+  color:var(--muted);
+
+  line-height:1.9;
+
+  max-width:900px;
+
+}
+
+/* =====================================================
+ARTIFACT
+===================================================== */
+
+.artifact{
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  padding:32px;
+
+  overflow:auto;
+
+  box-shadow:0 10px 30px rgba(15,23,42,.05);
+
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer{
+
+  background:#071026;
+
+  color:white;
+
+  padding:70px 30px;
+
+  text-align:center;
+
+}
+
+footer h2{
+
+  font-size:38px;
+
+  margin-bottom:18px;
+
+}
+
+footer p{
+
+  max-width:900px;
+
+  margin:auto;
+
+  color:#cbd5e1;
+
+  line-height:1.9;
+
+}
+
+/* =====================================================
+RESPONSIVO
+===================================================== */
+
+@media(max-width:1200px){
+
+  .menu{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero{
+    padding:130px 20px 80px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .section{
+    padding:50px 16px;
+  }
+
+  .artifact{
+    padding:20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <div class="logo">
+      BPM • Concreto
+    </div>
+
+    <div class="menu">
+
+      <a href="#macro">Fluxo Macro</a>
+      <a href="#sipoc">SIPOC</a>
+      <a href="#bpmn">BPMN</a>
+      <a href="#gargalos">Gargalos</a>
+      <a href="#melhorias">Melhorias</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#kpis">KPIs</a>
+      <a href="#governanca">Governança</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      Diagnóstico e Otimização de Processos
+    </div>
+
+    <h1>
+      Portal Executivo BPM — Área de Serviços Concreto
+    </h1>
+
+    <p>
+
+      Consolidação executiva do diagnóstico operacional da área de serviços,
+      contemplando BPMN AS-IS,
+      gargalos,
+      melhorias,
+      roadmap,
+      KPIs
+      e governança contínua.
+
+    </p>
+
+    <div class="summary">
+
+      <h2>
+        Resumo Executivo
+      </h2>
+
+      <p>
+
+        O diagnóstico operacional identificou elevada dependência de processos manuais,
+        inconsistências entre registros físicos e digitais,
+        baixa integração sistêmica entre áreas,
+        dependência técnica centralizada
+        e fragmentação operacional do fluxo de faturamento.
+
+        <br><br>
+
+        A partir do mapeamento BPMN AS-IS foi possível estruturar oportunidades de melhoria focadas em:
+        padronização operacional,
+        integração sistêmica,
+        redução de retrabalho,
+        aumento de produtividade
+        e fortalecimento da governança operacional.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =====================================================
+FLUXO MACRO
+===================================================== -->
+
+<section class="section" id="macro">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Fluxo Macro Operacional
+      </h2>
+
+      <p>
+        Visão executiva consolidando o fluxo ponta a ponta da operação.
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <div class="flow-grid">
+
+        <div class="step">
+
+          <div class="badge-number">1</div>
+
+          <div>
+
+            <h3>
+              Solicitação do Cliente
+            </h3>
+
+            <p>
+              Contato inicial via telefone, chat ou formulário com registro das informações e prioridade do atendimento.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">2</div>
+
+          <div>
+
+            <h3>
+              Atendimento & Abertura da OS
+            </h3>
+
+            <p>
+              Coleta de informações do chamado e criação da Ordem de Serviço no ERP.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">3</div>
+
+          <div>
+
+            <h3>
+              Agendamento Técnico
+            </h3>
+
+            <p>
+              Definição do técnico responsável e alinhamento da visita com o cliente.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">4</div>
+
+          <div>
+
+            <h3>
+              Diagnóstico Técnico
+            </h3>
+
+            <p>
+              Visita técnica para identificação do problema e levantamento de peças necessárias.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">5</div>
+
+          <div>
+
+            <h3>
+              Elaboração do Orçamento
+            </h3>
+
+            <p>
+              Consolidação de peças e mão de obra para elaboração da proposta comercial.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">6</div>
+
+          <div>
+
+            <h3>
+              Aprovação do Cliente
+            </h3>
+
+            <p>
+              Aprovação do orçamento pelo cliente e realização de follow-up operacional.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">7</div>
+
+          <div>
+
+            <h3>
+              Execução do Serviço
+            </h3>
+
+            <p>
+              Execução final do serviço, substituição de peças e realização de testes.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">8</div>
+
+          <div>
+
+            <h3>
+              Conferência da OS
+            </h3>
+
+            <p>
+              Validação das informações operacionais e conferência antes do faturamento.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="step">
+
+          <div class="badge-number">9</div>
+
+          <div>
+
+            <h3>
+              Faturamento & Encerramento
+            </h3>
+
+            <p>
+              Emissão de notas fiscais, cobranças e encerramento operacional da OS.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.flow-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:24px;
+
+}
+
+.step{
+
+  background:#ffffff;
+
+  border:1px solid #e2e8f0;
+
+  border-radius:24px;
+
+  padding:24px;
+
+  min-height:180px;
+
+  display:flex;
+
+  gap:16px;
+
+  align-items:flex-start;
+
+  transition:.2s;
+
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+
+}
+
+.step:hover{
+
+  transform:translateY(-3px);
+
+}
+
+.badge-number{
+
+  min-width:54px;
+
+  height:54px;
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4
+  );
+
+  color:white;
+
+  font-weight:800;
+
+  font-size:18px;
+
+}
+
+.step h3{
+
+  margin-bottom:10px;
+
+  font-size:20px;
+
+  line-height:1.4;
+
+  color:#0f172a;
+
+}
+
+.step p{
+
+  color:#64748b;
+
+  font-size:15px;
+
+  line-height:1.8;
+
+}
+
+</style>
+
+<!-- =====================================================
+SIPOC
+===================================================== -->
+
+<section class="section" id="sipoc">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        SIPOC
+      </h2>
+
+      <p>
+        Visão sistêmica do processo operacional.
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <div class="sipoc-grid">
+
+        <!-- SUPPLIERS -->
+
+        <div class="sipoc-card">
+
+          <h3>
+            Suppliers
+          </h3>
+
+          <p class="sipoc-desc">
+            Fornecedores de recursos e informações operacionais.
+          </p>
+
+          <ul>
+
+            <li>Cliente</li>
+
+            <li>Estoque</li>
+
+            <li>Coordenação Operacional</li>
+
+            <li>ERP / Sistema</li>
+
+            <li>Técnicos</li>
+
+          </ul>
+
+        </div>
+
+        <!-- INPUTS -->
+
+        <div class="sipoc-card">
+
+          <h3>
+            Inputs
+          </h3>
+
+          <p class="sipoc-desc">
+            Entradas necessárias para execução do processo.
+          </p>
+
+          <ul>
+
+            <li>Solicitação de assistência</li>
+
+            <li>Dados do cliente</li>
+
+            <li>Informações técnicas</li>
+
+            <li>Peças e materiais</li>
+
+            <li>Dados operacionais</li>
+
+          </ul>
+
+        </div>
+
+        <!-- PROCESS -->
+
+        <div class="sipoc-card">
+
+          <h3>
+            Process
+          </h3>
+
+          <p class="sipoc-desc">
+            Macroetapas do fluxo operacional.
+          </p>
+
+          <ul>
+
+            <li>Atendimento</li>
+
+            <li>Agendamento</li>
+
+            <li>Diagnóstico Técnico</li>
+
+            <li>Orçamentação</li>
+
+            <li>Execução</li>
+
+            <li>Conferência & Faturamento</li>
+
+          </ul>
+
+        </div>
+
+        <!-- OUTPUTS -->
+
+        <div class="sipoc-card">
+
+          <h3>
+            Outputs
+          </h3>
+
+          <p class="sipoc-desc">
+            Entregas geradas ao longo do processo.
+          </p>
+
+          <ul>
+
+            <li>Ordem de Serviço</li>
+
+            <li>Visita agendada</li>
+
+            <li>Diagnóstico técnico</li>
+
+            <li>Orçamento</li>
+
+            <li>Serviço executado</li>
+
+            <li>Nota fiscal</li>
+
+          </ul>
+
+        </div>
+
+        <!-- CUSTOMERS -->
+
+        <div class="sipoc-card">
+
+          <h3>
+            Customers
+          </h3>
+
+          <p class="sipoc-desc">
+            Stakeholders impactados pelas entregas.
+          </p>
+
+          <ul>
+
+            <li>Cliente Final</li>
+
+            <li>Financeiro</li>
+
+            <li>Coordenação Operacional</li>
+
+            <li>Diretoria</li>
+
+            <li>Técnicos</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.sipoc-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:24px;
+
+}
+
+.sipoc-card{
+
+  background:white;
+
+  border:1px solid #e2e8f0;
+
+  border-radius:24px;
+
+  padding:28px;
+
+  min-height:380px;
+
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+
+}
+
+.sipoc-card h3{
+
+  font-size:22px;
+
+  margin-bottom:12px;
+
+  color:#0f172a;
+
+}
+
+.sipoc-desc{
+
+  color:#64748b;
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+
+}
+
+.sipoc-card ul{
+
+  padding-left:18px;
+
+}
+
+.sipoc-card li{
+
+  margin-bottom:14px;
+
+  color:#334155;
+
+  line-height:1.7;
+
+}
+
+@media(max-width:1400px){
+
+  .sipoc-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .sipoc-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+</style>
+<!-- =====================================================
+BPMN
+===================================================== -->
+
+<section class="section" id="bpmn">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        BPMN AS-IS
+      </h2>
+
+      <p>
+
+        Fluxo detalhado da operação atual da área de serviços,
+        consolidando etapas operacionais,
+        interações entre áreas
+        e gargalos identificados no processo.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <!-- =====================================================
+           TOOLBAR
+      ===================================================== -->
+
+      <div class="bpmn-toolbar">
+
+        <button onclick="zoomIn()">
+          +
+        </button>
+
+        <button onclick="zoomOut()">
+          −
+        </button>
+
+        <button onclick="resetZoom()">
+          Reset
+        </button>
+
+        <button onclick="toggleFullscreen()">
+          Fullscreen
+        </button>
+
+      </div>
+
+      <!-- =====================================================
+           BPMN WRAPPER
+      ===================================================== -->
+
+      <div
+        class="bpmn-area"
+        id="diagramViewport"
+      >
+
+        <div id="diagramContent">
+
+<div class="mermaid">
+
+flowchart TD
+
+%% =====================================================
+%% WRAPPER PRINCIPAL
+%% =====================================================
+
+subgraph WRAPPER[ ]
+direction LR
+
+%% =====================================================
+%% CLIENTE
+%% =====================================================
+
+subgraph CL[Cliente]
+direction TB
+
+A([Solicitar assistência técnica])
+
+P2([Receber orçamento])
+
+R{Orçamento aprovado?}
+
+S([Encerrar solicitação])
+
+AC([Serviço concluído])
+
+end
+
+%% =====================================================
+%% ATENDIMENTO
+%% =====================================================
+
+subgraph AT[Atendimento]
+direction TB
+
+B[Registrar solicitação no ERP]
+
+C[Emitir ordem de serviço física]
+
+D[Agendar visita técnica]
+
+TI((Aguardar disponibilidade))
+
+E{Necessita apoio operacional?}
+
+T[Realizar novo agendamento]
+
+end
+
+%% =====================================================
+%% COORDENAÇÃO
+%% =====================================================
+
+subgraph CO[Coordenação Operacional]
+direction TB
+
+F[Analisar complexidade técnica]
+
+O[Revisar orçamento]
+
+end
+
+%% =====================================================
+%% EQUIPE TÉCNICA
+%% =====================================================
+
+subgraph TE[Equipe Técnica]
+direction TB
+
+G[Receber ordem de serviço]
+
+H[Retirar peças no estoque]
+
+I[Realizar visita de diagnóstico]
+
+J[Identificar problema real]
+
+K[Preencher OS física e aplicativo ERP]
+
+K2[Descrever serviço realizado]
+
+DO1[[Relatório diagnóstico]]
+
+U[Executar segunda visita]
+
+V[Executar serviço]
+
+W[Registrar execução do serviço]
+
+end
+
+%% =====================================================
+%% ORÇAMENTO & FATURAMENTO
+%% =====================================================
+
+subgraph OR[Orçamento & Faturamento]
+direction TB
+
+L[Solicitar valor das peças ao estoque]
+
+M[Elaborar orçamento manualmente]
+
+M3[Contatar técnico para esclarecimentos]
+
+N{Necessita revisão da coordenação?}
+
+P[Enviar orçamento ao cliente]
+
+Q[Realizar follow-up manual]
+
+X[Conferir informações da OS]
+
+Y[Emitir NF mão de obra]
+
+Z[Emitir NF peças]
+
+AA[Emitir cobrança mão de obra]
+
+AB1[Emitir cobrança peças]
+
+AB[Elaborar relatório de produtividade]
+
+end
+
+end
+
+%% =====================================================
+%% FLUXO PRINCIPAL
+%% =====================================================
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> TI
+
+TI --> E
+
+E -- Sim --> F
+
+E -- Não --> G
+
+F --> G
+
+G --> H
+
+H --> I
+
+I --> J
+
+J --> K
+
+K --> K2
+
+K2 --> DO1
+
+DO1 --> L
+
+L --> M
+
+M --> M3
+
+M3 --> N
+
+N -- Sim --> O
+
+N -- Não --> P
+
+O --> P
+
+P -->|Mensagem: proposta| P2
+
+P2 -->|Resposta cliente| Q
+
+Q --> R
+
+R -- Não --> S
+
+R -- Sim --> T
+
+T --> U
+
+U --> V
+
+V --> W
+
+W --> X
+
+X --> Y
+
+Y --> Z
+
+Z --> AA
+
+AA --> AB1
+
+AB1 --> AB
+
+AB --> AC
+
+%% =====================================================
+%% GARGALOS
+%% =====================================================
+
+C --> C1["Duplicidade operacional entre controle físico e digital"]:::artifact
+
+K --> K1["Inconsistência entre registros da OS e ERP"]:::artifact
+
+L --> L1["Dependência manual de comunicação com estoque"]:::artifact
+
+M --> M1["Baixa padronização na elaboração de orçamento"]:::artifact
+
+O --> O1["Dependência da coordenação para revisão técnica"]:::artifact
+
+Q --> Q1["Acompanhamento manual de propostas"]:::artifact
+
+U --> U1["Baixa assertividade no diagnóstico inicial"]:::artifact
+
+AA --> AA1["Fragmentação do faturamento no ERP"]:::artifact
+
+M --> M2["Dependência de conhecimento técnico centralizado"]:::artifact
+
+B --> B1["Sobreposição operacional entre atendimento e orçamento"]:::artifact
+
+%% =====================================================
+%% ESTILOS
+%% =====================================================
+
+classDef gateway stroke:#0f172a,stroke-width:2px,fill:#f8fafc,color:#0f172a;
+
+class E,N,R gateway
+
+classDef artifact fill:#fff7ed,stroke:#f59e0b,color:#92400e,stroke-width:1px;
+
+classDef dataobj fill:#eef2ff,stroke:#c7d2fe,color:#3730a3;
+
+classDef timer fill:#fff7ed,stroke:#f97316,color:#f97316;
+
+class DO1 dataobj
+
+class TI timer
+
+style C1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style K1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style L1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style M1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style O1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style Q1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style U1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style AA1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style M2 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+style B1 fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,font-size:12px
+
+linkStyle default stroke:#cbd5e1,stroke-width:1px,stroke-dasharray: 3 3;
+
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+MERMAID + PANZOOM
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
+
+<script>
+
+mermaid.initialize({
+
+  startOnLoad:true,
+
+  theme:"default",
+
+  securityLevel:"loose",
+
+  flowchart:{
+
+    curve:"basis",
+
+    htmlLabels:true,
+
+    useMaxWidth:false
+
+  }
+
+});
+
+const elem =
+document.getElementById('diagramContent');
+
+const panzoom = Panzoom(elem, {
+
+  maxScale:2,
+
+  minScale:0.5,
+
+  startScale:1,
+
+  step:0.1
+
+});
+
+const parent =
+document.getElementById('diagramViewport');
+
+parent.addEventListener(
+  'wheel',
+  panzoom.zoomWithWheel
+);
+
+function zoomIn(){
+
+  panzoom.zoomIn();
+
+}
+
+function zoomOut(){
+
+  panzoom.zoomOut();
+
+}
+
+function resetZoom(){
+
+  panzoom.reset();
+
+}
+
+function toggleFullscreen(){
+
+  const box =
+  document.getElementById('diagramViewport');
+
+  if(!document.fullscreenElement){
+
+    box.requestFullscreen();
+
+  } else {
+
+    document.exitFullscreen();
+
+  }
+
+}
+
+</script>
+
+<style>
+
+/* =====================================================
+BPMN TOOLBAR
+===================================================== */
+
+.bpmn-toolbar{
+
+  display:flex;
+
+  gap:12px;
+
+  margin-bottom:20px;
+
+  flex-wrap:wrap;
+
+}
+
+.bpmn-toolbar button{
+
+  border:none;
+
+  background:#0f172a;
+
+  color:white;
+
+  padding:10px 18px;
+
+  border-radius:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+.bpmn-toolbar button:hover{
+
+  opacity:.92;
+
+  transform:translateY(-1px);
+
+}
+
+/* =====================================================
+BPMN AREA (CORRIGIDO)
+===================================================== */
+
+.bpmn-area{
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:14px;
+  padding:20px;
+  overflow:auto;
+  cursor:grab;
+  position:relative;
+/* 👇 NOVA LINHA ADICIONADA 👇 */
+  max-height: 1000px; /* Você pode aumentar ou diminuir esse valor como achar melhor */
+}
+
+.bpmn-area:active{
+  cursor:grabbing;
+}
+
+#diagramContent{
+  width:max-content;
+  transform-origin:top left;
+}
+
+.mermaid{
+  /* Aumentado de 2200px para 2500px para evitar achatamento */
+  min-width:2500px; 
+}
+
+.mermaid svg{
+  overflow:visible !important;
+  max-width:none !important;
+  height:auto;
+}
+
+</style>
+<!-- =====================================================
+GARGALOS OPERACIONAIS
+===================================================== -->
+
+<section class="section" id="gargalos">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Gargalos Operacionais
+      </h2>
+
+      <p>
+
+        Consolidação dos principais gargalos identificados
+        durante o mapeamento BPMN AS-IS da área de serviços.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <div class="table-wrapper">
+
+        <table class="exec-table">
+
+          <thead>
+
+            <tr>
+
+              <th>ID</th>
+
+              <th>Gargalo</th>
+
+              <th>Categoria</th>
+
+              <th>Descrição</th>
+
+              <th>Impacto Operacional</th>
+
+              <th>Criticidade</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- =====================================================
+                 G01
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G01
+              </td>
+
+              <td>
+                Duplicidade operacional entre controle físico e digital
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Processo / Sistema
+                </span>
+
+              </td>
+
+              <td>
+
+                A operação utiliza simultaneamente OS física
+                e registros digitais no ERP,
+                gerando retrabalho e inconsistências.
+
+              </td>
+
+              <td>
+
+                Aumento do retrabalho administrativo,
+                perda de produtividade
+                e divergência de informações.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G02
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G02
+              </td>
+
+              <td>
+                Inconsistência entre registros da OS e ERP
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Qualidade da Informação
+                </span>
+
+              </td>
+
+              <td>
+
+                Informações registradas pelos técnicos
+                apresentam divergências entre OS física
+                e aplicativo ERP.
+
+              </td>
+
+              <td>
+
+                Erros operacionais,
+                retrabalho administrativo
+                e baixa confiabilidade da informação.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G03
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G03
+              </td>
+
+              <td>
+                Dependência manual de comunicação com estoque
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Integração Sistêmica
+                </span>
+
+              </td>
+
+              <td>
+
+                Consulta de peças e valores ocorre manualmente,
+                sem integração direta com o ERP.
+
+              </td>
+
+              <td>
+
+                Lentidão na elaboração do orçamento
+                e aumento do lead time operacional.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G04
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G04
+              </td>
+
+              <td>
+                Baixa padronização na elaboração de orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Padronização Operacional
+                </span>
+
+              </td>
+
+              <td>
+
+                Orçamentos são produzidos de maneira pouco padronizada,
+                dependendo fortemente do conhecimento individual.
+
+              </td>
+
+              <td>
+
+                Variabilidade operacional,
+                inconsistências comerciais
+                e perda de produtividade.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G05
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G05
+              </td>
+
+              <td>
+                Dependência da coordenação para revisão técnica
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Governança / Conhecimento
+                </span>
+
+              </td>
+
+              <td>
+
+                Orçamentos mais complexos dependem
+                da validação centralizada da coordenação.
+
+              </td>
+
+              <td>
+
+                Gargalo decisório,
+                lentidão operacional
+                e concentração de conhecimento.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G06
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G06
+              </td>
+
+              <td>
+                Acompanhamento manual de propostas
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Processo Comercial
+                </span>
+
+              </td>
+
+              <td>
+
+                Follow-up comercial realizado manualmente
+                sem rastreabilidade sistêmica.
+
+              </td>
+
+              <td>
+
+                Risco de perda de oportunidades
+                e baixa eficiência comercial.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G07
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G07
+              </td>
+
+              <td>
+                Baixa assertividade no diagnóstico inicial
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Operação Técnica
+                </span>
+
+              </td>
+
+              <td>
+
+                Parte significativa dos atendimentos
+                necessita segunda visita técnica.
+
+              </td>
+
+              <td>
+
+                Aumento de custos operacionais,
+                deslocamentos
+                e lead time.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G08
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G08
+              </td>
+
+              <td>
+                Fragmentação do faturamento no ERP
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Financeiro / Sistema
+                </span>
+
+              </td>
+
+              <td>
+
+                Processo financeiro exige múltiplas emissões
+                e lançamentos separados.
+
+              </td>
+
+              <td>
+
+                Complexidade operacional,
+                retrabalho
+                e aumento do tempo administrativo.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G09
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G09
+              </td>
+
+              <td>
+                Dependência de conhecimento técnico centralizado
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Governança / Conhecimento
+                </span>
+
+              </td>
+
+              <td>
+
+                Parte relevante da operação depende
+                do conhecimento específico da coordenação.
+
+              </td>
+
+              <td>
+
+                Baixa escalabilidade operacional
+                e elevado risco de dependência crítica.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 G10
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                G10
+              </td>
+
+              <td>
+                Sobreposição operacional entre atendimento e orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Estrutura Organizacional
+                </span>
+
+              </td>
+
+              <td>
+
+                Atividades administrativas e de orçamento
+                apresentam sobreposição de responsabilidades.
+
+              </td>
+
+              <td>
+
+                Sobrecarga operacional,
+                perda de produtividade
+                e baixa segregação de funções.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =====================================================
+TABLE
+===================================================== */
+
+.table-wrapper{
+
+  overflow:auto;
+
+}
+
+.exec-table{
+
+  width:100%;
+
+  min-width:1700px;
+
+  border-collapse:collapse;
+
+}
+
+.exec-table thead{
+
+  background:#0f172a;
+
+}
+
+.exec-table th{
+
+  color:white;
+
+  text-align:left;
+
+  padding:20px;
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.8px;
+
+}
+
+.exec-table td{
+
+  padding:22px;
+
+  border-bottom:1px solid #e2e8f0;
+
+  vertical-align:top;
+
+  color:#334155;
+
+  line-height:1.8;
+
+  font-size:14px;
+
+}
+
+.exec-table tbody tr{
+
+  transition:.2s;
+
+}
+
+.exec-table tbody tr:hover{
+
+  background:#f8fafc;
+
+}
+
+/* =====================================================
+TAGS
+===================================================== */
+
+.tag{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+}
+
+.high{
+
+  background:#fee2e2;
+
+  color:#dc2626;
+
+  border:1px solid #fecaca;
+
+}
+
+.medium{
+
+  background:#fef3c7;
+
+  color:#d97706;
+
+  border:1px solid #fde68a;
+
+}
+
+.low{
+
+  background:#dcfce7;
+
+  color:#15803d;
+
+  border:1px solid #bbf7d0;
+
+}
+
+.category{
+
+  background:#eff6ff;
+
+  color:#2563eb;
+
+  border:1px solid #bfdbfe;
+
+}
+
+</style>
+<!-- =====================================================
+PLANO DE MELHORIAS
+===================================================== -->
+
+<section class="section" id="melhorias">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Plano de Melhorias Operacionais
+      </h2>
+
+      <p>
+
+        Estrutura consolidada de melhorias propostas
+        para mitigação dos gargalos identificados
+        no BPMN AS-IS da área de serviços.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <div class="table-wrapper">
+
+        <table class="exec-table">
+
+          <thead>
+
+            <tr>
+
+              <th>ID</th>
+
+              <th>Gargalo Relacionado</th>
+
+              <th>Categoria</th>
+
+              <th>Melhoria Proposta</th>
+
+              <th>Descrição da Implementação</th>
+
+              <th>Impacto Esperado</th>
+
+              <th>Prioridade</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- =====================================================
+                 M01
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M01
+              </td>
+
+              <td>
+                G01 — Duplicidade operacional entre controle físico e digital
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Sistema / Processo
+                </span>
+
+              </td>
+
+              <td>
+                Eliminar controle físico da OS
+              </td>
+
+              <td>
+
+                Estruturar utilização integral do ERP
+                e aplicativo mobile como fonte única
+                de informação operacional.
+
+              </td>
+
+              <td>
+
+                Redução de retrabalho administrativo,
+                aumento da rastreabilidade
+                e maior confiabilidade das informações.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M02
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M02
+              </td>
+
+              <td>
+                G02 — Inconsistência entre registros da OS e ERP
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Padronização Operacional
+                </span>
+
+              </td>
+
+              <td>
+                Padronizar preenchimento técnico
+              </td>
+
+              <td>
+
+                Criar checklist operacional
+                e critérios padronizados
+                para preenchimento da OS.
+
+              </td>
+
+              <td>
+
+                Redução de inconsistências,
+                melhoria da qualidade da informação
+                e diminuição de retrabalho.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M03
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M03
+              </td>
+
+              <td>
+                G03 — Dependência manual de comunicação com estoque
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Integração Sistêmica
+                </span>
+
+              </td>
+
+              <td>
+                Integrar orçamento e estoque no ERP
+              </td>
+
+              <td>
+
+                Automatizar consulta de disponibilidade
+                e valores de peças diretamente no sistema.
+
+              </td>
+
+              <td>
+
+                Redução do lead time de orçamento
+                e aumento da produtividade operacional.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M04
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M04
+              </td>
+
+              <td>
+                G04 — Baixa padronização na elaboração de orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Padronização
+                </span>
+
+              </td>
+
+              <td>
+                Estruturar modelo padronizado de orçamento
+              </td>
+
+              <td>
+
+                Criar templates integrados ao ERP
+                para geração automática de orçamento.
+
+              </td>
+
+              <td>
+
+                Maior agilidade operacional,
+                redução de erros
+                e aumento da produtividade.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M05
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M05
+              </td>
+
+              <td>
+                G05 / G09 — Dependência técnica centralizada
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Governança / Conhecimento
+                </span>
+
+              </td>
+
+              <td>
+                Estruturar base de conhecimento operacional
+              </td>
+
+              <td>
+
+                Documentar procedimentos técnicos,
+                critérios de revisão
+                e padrões operacionais.
+
+              </td>
+
+              <td>
+
+                Redução da dependência da coordenação,
+                aumento da escalabilidade
+                e fortalecimento da governança.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M06
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M06
+              </td>
+
+              <td>
+                G06 — Acompanhamento manual de propostas
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Automação Comercial
+                </span>
+
+              </td>
+
+              <td>
+                Automatizar follow-up comercial
+              </td>
+
+              <td>
+
+                Implementar notificações automáticas
+                e gestão de status de propostas no ERP.
+
+              </td>
+
+              <td>
+
+                Aumento da rastreabilidade,
+                redução de perda de oportunidades
+                e maior eficiência comercial.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M07
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M07
+              </td>
+
+              <td>
+                G07 — Baixa assertividade no diagnóstico inicial
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Operação Técnica
+                </span>
+
+              </td>
+
+              <td>
+                Melhorar processo de triagem inicial
+              </td>
+
+              <td>
+
+                Criar roteiro estruturado
+                de coleta de informações
+                durante o atendimento inicial.
+
+              </td>
+
+              <td>
+
+                Redução de segunda visita técnica,
+                menor custo operacional
+                e aumento da assertividade.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M08
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M08
+              </td>
+
+              <td>
+                G08 — Fragmentação do faturamento no ERP
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Financeiro / Sistema
+                </span>
+
+              </td>
+
+              <td>
+                Revisar estrutura de faturamento do ERP
+              </td>
+
+              <td>
+
+                Avaliar simplificação operacional
+                do modelo atual de faturamento.
+
+              </td>
+
+              <td>
+
+                Redução de burocracia administrativa
+                e ganho de produtividade financeira.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M09
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M09
+              </td>
+
+              <td>
+                G10 — Sobreposição operacional entre atendimento e orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Estrutura Organizacional
+                </span>
+
+              </td>
+
+              <td>
+                Redefinir responsabilidades operacionais
+              </td>
+
+              <td>
+
+                Formalizar papéis,
+                responsabilidades
+                e segregação operacional das atividades.
+
+              </td>
+
+              <td>
+
+                Redução de sobrecarga operacional,
+                aumento de produtividade
+                e melhoria da governança.
+
+              </td>
+
+              <td>
+
+                <span class="tag medium">
+                  Média
+                </span>
+
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 M10
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                M10
+              </td>
+
+              <td>
+                Todos os gargalos operacionais
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Gestão por Indicadores
+                </span>
+
+              </td>
+
+              <td>
+                Estruturar monitoramento operacional
+              </td>
+
+              <td>
+
+                Implementar KPIs de SLA,
+                produtividade,
+                retrabalho,
+                lead time
+                e maturidade operacional.
+
+              </td>
+
+              <td>
+
+                Fortalecimento da governança,
+                melhoria contínua
+                e maior capacidade de tomada de decisão.
+
+              </td>
+
+              <td>
+
+                <span class="tag high">
+                  Alta
+                </span>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =====================================================
+TABLE
+===================================================== */
+
+.table-wrapper{
+
+  overflow:auto;
+
+}
+
+.exec-table{
+
+  width:100%;
+
+  min-width:1900px;
+
+  border-collapse:collapse;
+
+}
+
+.exec-table thead{
+
+  background:#0f172a;
+
+}
+
+.exec-table th{
+
+  color:white;
+
+  text-align:left;
+
+  padding:20px;
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.8px;
+
+}
+
+.exec-table td{
+
+  padding:22px;
+
+  border-bottom:1px solid #e2e8f0;
+
+  vertical-align:top;
+
+  color:#334155;
+
+  line-height:1.8;
+
+  font-size:14px;
+
+}
+
+.exec-table tbody tr{
+
+  transition:.2s;
+
+}
+
+.exec-table tbody tr:hover{
+
+  background:#f8fafc;
+
+}
+
+/* =====================================================
+TAGS
+===================================================== */
+
+.tag{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+}
+
+.high{
+
+  background:#fee2e2;
+
+  color:#dc2626;
+
+  border:1px solid #fecaca;
+
+}
+
+.medium{
+
+  background:#fef3c7;
+
+  color:#d97706;
+
+  border:1px solid #fde68a;
+
+}
+
+.low{
+
+  background:#dcfce7;
+
+  color:#15803d;
+
+  border:1px solid #bbf7d0;
+
+}
+
+.category{
+
+  background:#eff6ff;
+
+  color:#2563eb;
+
+  border:1px solid #bfdbfe;
+
+}
+
+</style>
+<!-- =====================================================
+ROADMAP DE IMPLEMENTAÇÃO
+===================================================== -->
+
+<section class="section" id="roadmap">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Roadmap de Implementação
+      </h2>
+
+      <p>
+
+        Estrutura evolutiva para implementação das melhorias operacionais,
+        considerando criticidade,
+        dependências entre iniciativas
+        e maturidade organizacional.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <div class="timeline">
+
+        <!-- =====================================================
+             FASE 1
+        ===================================================== -->
+
+        <div class="phase phase1">
+
+          <div class="phase-header">
+
+            <span class="phase-badge">
+              0–30 dias
+            </span>
+
+            <h3>
+              Fase 1 — Estabilização Operacional
+            </h3>
+
+          </div>
+
+          <p class="phase-description">
+
+            Fase focada na redução imediata de retrabalho,
+            melhoria da qualidade das informações
+            e estabilização da operação.
+
+          </p>
+
+          <div class="phase-items">
+
+            <div class="roadmap-card">
+
+              <h4>
+                M02 — Padronizar preenchimento técnico
+              </h4>
+
+              <p>
+
+                Estruturar checklist operacional
+                e padronização da OS.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M07 — Melhorar triagem inicial
+              </h4>
+
+              <p>
+
+                Estruturar roteiro de coleta
+                de informações no atendimento inicial.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M04 — Padronizar orçamento
+              </h4>
+
+              <p>
+
+                Estruturar modelo operacional padronizado
+                para elaboração de orçamento.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M09 — Redefinir responsabilidades
+              </h4>
+
+              <p>
+
+                Formalizar responsabilidades
+                entre atendimento e orçamento.
+
+              </p>
+
+              <span class="tag medium">
+                Média Prioridade
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- =====================================================
+             FASE 2
+        ===================================================== -->
+
+        <div class="phase phase2">
+
+          <div class="phase-header">
+
+            <span class="phase-badge">
+              30–60 dias
+            </span>
+
+            <h3>
+              Fase 2 — Governança e Padronização
+            </h3>
+
+          </div>
+
+          <p class="phase-description">
+
+            Consolidação da governança operacional,
+            redução da dependência técnica
+            e fortalecimento da padronização.
+
+          </p>
+
+          <div class="phase-items">
+
+            <div class="roadmap-card">
+
+              <h4>
+                M05 — Base de conhecimento operacional
+              </h4>
+
+              <p>
+
+                Documentar procedimentos técnicos,
+                padrões operacionais
+                e critérios de revisão.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M10 — Estruturar indicadores operacionais
+              </h4>
+
+              <p>
+
+                Implementar KPIs de SLA,
+                produtividade,
+                retrabalho
+                e lead time operacional.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- =====================================================
+             FASE 3
+        ===================================================== -->
+
+        <div class="phase phase3">
+
+          <div class="phase-header">
+
+            <span class="phase-badge">
+              60–120 dias
+            </span>
+
+            <h3>
+              Fase 3 — Integração Sistêmica
+            </h3>
+
+          </div>
+
+          <p class="phase-description">
+
+            Evolução tecnológica da operação
+            através de automações,
+            integrações sistêmicas
+            e digitalização dos fluxos.
+
+          </p>
+
+          <div class="phase-items">
+
+            <div class="roadmap-card">
+
+              <h4>
+                M03 — Integrar orçamento e estoque
+              </h4>
+
+              <p>
+
+                Automatizar consulta de disponibilidade
+                e valores de peças no ERP.
+
+              </p>
+
+              <span class="tag medium">
+                Média Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M06 — Automatizar follow-up comercial
+              </h4>
+
+              <p>
+
+                Estruturar notificações automáticas
+                e acompanhamento sistêmico de propostas.
+
+              </p>
+
+              <span class="tag medium">
+                Média Prioridade
+              </span>
+
+            </div>
+
+            <div class="roadmap-card">
+
+              <h4>
+                M01 — Eliminar OS física
+              </h4>
+
+              <p>
+
+                Transformar ERP e aplicativo mobile
+                em fonte única operacional da informação.
+
+              </p>
+
+              <span class="tag high">
+                Alta Prioridade
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- =====================================================
+             FASE 4
+        ===================================================== -->
+
+        <div class="phase phase4">
+
+          <div class="phase-header">
+
+            <span class="phase-badge">
+              120–180 dias
+            </span>
+
+            <h3>
+              Fase 4 — Otimização Estrutural
+            </h3>
+
+          </div>
+
+          <p class="phase-description">
+
+            Consolidação da maturidade operacional
+            e otimização estrutural dos processos administrativos
+            e financeiros.
+
+          </p>
+
+          <div class="phase-items">
+
+            <div class="roadmap-card">
+
+              <h4>
+                M08 — Revisar faturamento ERP
+              </h4>
+
+              <p>
+
+                Simplificar fluxo financeiro
+                e reduzir fragmentação operacional.
+
+              </p>
+
+              <span class="tag medium">
+                Média Prioridade
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =====================================================
+TIMELINE
+===================================================== */
+
+.timeline{
+
+  display:flex;
+
+  gap:24px;
+
+  overflow:auto;
+
+  padding-bottom:10px;
+
+}
+
+/* =====================================================
+PHASE
+===================================================== */
+
+.phase{
+
+  min-width:380px;
+
+  border-radius:24px;
+
+  padding:28px;
+
+  border:1px solid #e2e8f0;
+
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+
+}
+
+.phase1{
+
+  background:#dbeafe;
+
+}
+
+.phase2{
+
+  background:#ede9fe;
+
+}
+
+.phase3{
+
+  background:#dcfce7;
+
+}
+
+.phase4{
+
+  background:#fef3c7;
+
+}
+
+/* =====================================================
+PHASE HEADER
+===================================================== */
+
+.phase-header{
+
+  margin-bottom:18px;
+
+}
+
+.phase-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:#0f172a;
+
+  color:white;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  margin-bottom:16px;
+
+}
+
+.phase-header h3{
+
+  font-size:24px;
+
+  line-height:1.4;
+
+  color:#0f172a;
+
+}
+
+/* =====================================================
+DESCRIPTION
+===================================================== */
+
+.phase-description{
+
+  color:#475569;
+
+  line-height:1.9;
+
+  font-size:14px;
+
+  margin-bottom:26px;
+
+}
+
+/* =====================================================
+ITEMS
+===================================================== */
+
+.phase-items{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+}
+
+/* =====================================================
+ROADMAP CARD
+===================================================== */
+
+.roadmap-card{
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:22px;
+
+  border:1px solid rgba(255,255,255,.7);
+
+  box-shadow:0 6px 16px rgba(15,23,42,.05);
+
+}
+
+.roadmap-card h4{
+
+  font-size:16px;
+
+  line-height:1.6;
+
+  margin-bottom:10px;
+
+  color:#0f172a;
+
+}
+
+.roadmap-card p{
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  color:#64748b;
+
+  margin-bottom:16px;
+
+}
+
+/* =====================================================
+TAGS
+===================================================== */
+
+.tag{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+}
+
+.high{
+
+  background:#fee2e2;
+
+  color:#dc2626;
+
+  border:1px solid #fecaca;
+
+}
+
+.medium{
+
+  background:#fef3c7;
+
+  color:#d97706;
+
+  border:1px solid #fde68a;
+
+}
+
+.low{
+
+  background:#dcfce7;
+
+  color:#15803d;
+
+  border:1px solid #bbf7d0;
+
+}
+
+</style>
+<!-- =====================================================
+KPIs OPERACIONAIS
+===================================================== -->
+
+<section class="section" id="kpis">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Indicadores Operacionais (KPIs)
+      </h2>
+
+      <p>
+
+        Estrutura proposta de monitoramento operacional
+        para acompanhamento da eficiência,
+        qualidade,
+        produtividade
+        e maturidade dos processos da área de serviços.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <!-- =====================================================
+           KPI CARDS
+      ===================================================== -->
+
+      <div class="kpi-summary-grid">
+
+        <div class="kpi-summary-card">
+
+          <span>
+            SLA
+          </span>
+
+          <h3>
+            Tempo Médio de Atendimento
+          </h3>
+
+          <p>
+
+            Monitorar velocidade operacional
+            entre abertura e conclusão da OS.
+
+          </p>
+
+        </div>
+
+        <div class="kpi-summary-card">
+
+          <span>
+            PRODUTIVIDADE
+          </span>
+
+          <h3>
+            OS Finalizadas por Técnico
+          </h3>
+
+          <p>
+
+            Acompanhar produtividade operacional
+            da equipe técnica.
+
+          </p>
+
+        </div>
+
+        <div class="kpi-summary-card">
+
+          <span>
+            QUALIDADE
+          </span>
+
+          <h3>
+            Taxa de Retrabalho
+          </h3>
+
+          <p>
+
+            Mensurar reincidências
+            e necessidade de segunda visita técnica.
+
+          </p>
+
+        </div>
+
+        <div class="kpi-summary-card">
+
+          <span>
+            GOVERNANÇA
+          </span>
+
+          <h3>
+            Conformidade Operacional
+          </h3>
+
+          <p>
+
+            Avaliar aderência aos padrões
+            e preenchimento correto da OS.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================
+           TABLE
+      ===================================================== -->
+
+      <div class="table-wrapper">
+
+        <table class="exec-table">
+
+          <thead>
+
+            <tr>
+
+              <th>ID</th>
+
+              <th>Indicador</th>
+
+              <th>Categoria</th>
+
+              <th>Objetivo</th>
+
+              <th>Fórmula</th>
+
+              <th>Meta Inicial</th>
+
+              <th>Periodicidade</th>
+
+              <th>Responsável</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- =====================================================
+                 KPI01
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI01
+              </td>
+
+              <td>
+                Tempo Médio de Atendimento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  SLA
+                </span>
+
+              </td>
+
+              <td>
+
+                Monitorar o tempo médio
+                entre abertura e conclusão da OS.
+
+              </td>
+
+              <td>
+
+                Soma do tempo total das OS
+                ÷ quantidade de OS concluídas.
+
+              </td>
+
+              <td>
+
+                ≤ 48h
+
+              </td>
+
+              <td>
+                Semanal
+              </td>
+
+              <td>
+                Coordenação Operacional
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI02
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI02
+              </td>
+
+              <td>
+                Taxa de Segunda Visita Técnica
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Qualidade
+                </span>
+
+              </td>
+
+              <td>
+
+                Avaliar assertividade
+                do diagnóstico inicial.
+
+              </td>
+
+              <td>
+
+                Nº de OS com retorno técnico
+                ÷ total de OS executadas.
+
+              </td>
+
+              <td>
+
+                ≤ 10%
+
+              </td>
+
+              <td>
+                Mensal
+              </td>
+
+              <td>
+                Coordenação Técnica
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI03
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI03
+              </td>
+
+              <td>
+                Produtividade por Técnico
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Produtividade
+                </span>
+
+              </td>
+
+              <td>
+
+                Monitorar quantidade média
+                de OS concluídas por técnico.
+
+              </td>
+
+              <td>
+
+                Nº de OS concluídas
+                ÷ quantidade de técnicos.
+
+              </td>
+
+              <td>
+
+                Crescimento contínuo
+
+              </td>
+
+              <td>
+                Mensal
+              </td>
+
+              <td>
+                Coordenação Operacional
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI04
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI04
+              </td>
+
+              <td>
+                Tempo Médio de Aprovação de Orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Processo Comercial
+                </span>
+
+              </td>
+
+              <td>
+
+                Avaliar agilidade
+                do fluxo comercial.
+
+              </td>
+
+              <td>
+
+                Soma do tempo entre envio
+                e aprovação do orçamento
+                ÷ quantidade de propostas.
+
+              </td>
+
+              <td>
+
+                ≤ 72h
+
+              </td>
+
+              <td>
+                Mensal
+              </td>
+
+              <td>
+                Comercial / Operacional
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI05
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI05
+              </td>
+
+              <td>
+                Taxa de Retrabalho Administrativo
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Eficiência
+                </span>
+
+              </td>
+
+              <td>
+
+                Monitorar necessidade
+                de correções administrativas.
+
+              </td>
+
+              <td>
+
+                Nº de OS corrigidas
+                ÷ total de OS processadas.
+
+              </td>
+
+              <td>
+
+                ≤ 5%
+
+              </td>
+
+              <td>
+                Mensal
+              </td>
+
+              <td>
+                Administrativo
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI06
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI06
+              </td>
+
+              <td>
+                Conformidade de Preenchimento da OS
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Governança
+                </span>
+
+              </td>
+
+              <td>
+
+                Garantir aderência
+                ao padrão operacional.
+
+              </td>
+
+              <td>
+
+                Nº de OS preenchidas corretamente
+                ÷ total de OS auditadas.
+
+              </td>
+
+              <td>
+
+                ≥ 95%
+
+              </td>
+
+              <td>
+                Quinzenal
+              </td>
+
+              <td>
+                Coordenação Operacional
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI07
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI07
+              </td>
+
+              <td>
+                Lead Time de Orçamento
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Eficiência Operacional
+                </span>
+
+              </td>
+
+              <td>
+
+                Monitorar velocidade
+                de elaboração do orçamento.
+
+              </td>
+
+              <td>
+
+                Soma do tempo de elaboração
+                ÷ quantidade de orçamentos emitidos.
+
+              </td>
+
+              <td>
+
+                ≤ 24h
+
+              </td>
+
+              <td>
+                Semanal
+              </td>
+
+              <td>
+                Operacional
+              </td>
+
+            </tr>
+
+            <!-- =====================================================
+                 KPI08
+            ===================================================== -->
+
+            <tr>
+
+              <td>
+                KPI08
+              </td>
+
+              <td>
+                Índice de Digitalização da Operação
+              </td>
+
+              <td>
+
+                <span class="tag category">
+                  Transformação Digital
+                </span>
+
+              </td>
+
+              <td>
+
+                Avaliar redução
+                da dependência de processos físicos.
+
+              </td>
+
+              <td>
+
+                Nº de OS totalmente digitais
+                ÷ total de OS processadas.
+
+              </td>
+
+              <td>
+
+                ≥ 90%
+
+              </td>
+
+              <td>
+                Mensal
+              </td>
+
+              <td>
+                Coordenação Operacional
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =====================================================
+KPI SUMMARY
+===================================================== */
+
+.kpi-summary-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:22px;
+
+  margin-bottom:34px;
+
+}
+
+.kpi-summary-card{
+
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+
+  border-radius:24px;
+
+  padding:28px;
+
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+
+}
+
+.kpi-summary-card span{
+
+  display:inline-flex;
+
+  margin-bottom:16px;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  background:#dbeafe;
+
+  color:#2563eb;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.8px;
+
+}
+
+.kpi-summary-card h3{
+
+  font-size:22px;
+
+  line-height:1.4;
+
+  margin-bottom:12px;
+
+  color:#0f172a;
+
+}
+
+.kpi-summary-card p{
+
+  color:#64748b;
+
+  line-height:1.8;
+
+  font-size:14px;
+
+}
+
+/* =====================================================
+TABLE
+===================================================== */
+
+.table-wrapper{
+
+  overflow:auto;
+
+}
+
+.exec-table{
+
+  width:100%;
+
+  min-width:1900px;
+
+  border-collapse:collapse;
+
+}
+
+.exec-table thead{
+
+  background:#0f172a;
+
+}
+
+.exec-table th{
+
+  color:white;
+
+  text-align:left;
+
+  padding:20px;
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.8px;
+
+}
+
+.exec-table td{
+
+  padding:22px;
+
+  border-bottom:1px solid #e2e8f0;
+
+  vertical-align:top;
+
+  color:#334155;
+
+  line-height:1.8;
+
+  font-size:14px;
+
+}
+
+.exec-table tbody tr{
+
+  transition:.2s;
+
+}
+
+.exec-table tbody tr:hover{
+
+  background:#f8fafc;
+
+}
+
+/* =====================================================
+TAGS
+===================================================== */
+
+.tag{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  white-space:nowrap;
+
+}
+
+.category{
+
+  background:#eff6ff;
+
+  color:#2563eb;
+
+  border:1px solid #bfdbfe;
+
+}
+
+</style>
+<!-- =====================================================
+GOVERNANÇA OPERACIONAL
+===================================================== -->
+
+<section class="section" id="governanca">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Governança Operacional
+      </h2>
+
+      <p>
+
+        Modelo estruturado de sustentação,
+        monitoramento
+        e evolução contínua da operação,
+        baseado em BPM,
+        melhoria contínua
+        e gestão orientada por indicadores.
+
+      </p>
+
+    </div>
+
+    <div class="artifact">
+
+      <!-- =====================================================
+           GOVERNANÇA OVERVIEW
+      ===================================================== -->
+
+      <div class="governance-top-grid">
+
+        <div class="governance-card">
+
+          <span>
+            OBJETIVO
+          </span>
+
+          <h3>
+            Sustentação da Melhoria Contínua
+          </h3>
+
+          <p>
+
+            Garantir continuidade das melhorias implementadas,
+            evolução operacional
+            e redução sistemática de gargalos.
+
+          </p>
+
+        </div>
+
+        <div class="governance-card">
+
+          <span>
+            BASE METODOLÓGICA
+          </span>
+
+          <h3>
+            BPM + Gestão por Indicadores
+          </h3>
+
+          <p>
+
+            Estrutura baseada em BPM,
+            governança operacional,
+            PDCA
+            e monitoramento contínuo da operação.
+
+          </p>
+
+        </div>
+
+        <div class="governance-card">
+
+          <span>
+            RESULTADO ESPERADO
+          </span>
+
+          <h3>
+            Maturidade Operacional
+          </h3>
+
+          <p>
+
+            Fortalecimento da governança,
+            padronização operacional
+            e aumento da eficiência dos processos.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================
+           GOVERNANCE CYCLE
+      ===================================================== -->
+
+      <div class="governance-wrapper">
+
+        <div class="governance-cycle">
+
+          <!-- =====================================================
+               SVG CONNECTIONS
+          ===================================================== -->
+
+          <svg
+            class="cycle-svg"
+            viewBox="0 0 900 900"
+          >
+
+            <defs>
+
+              <marker
+                id="arrowhead"
+                markerWidth="12"
+                markerHeight="8"
+                refX="10"
+                refY="4"
+                orient="auto"
+              >
+
+                <polygon
+                  points="0 0, 12 4, 0 8"
+                  fill="#cbd5e1"
+                />
+
+              </marker>
+
+            </defs>
+
+            <!-- PLAN -> IMPLEMENT -->
+
+            <path
+              d="M560 130
+                 C720 170 800 250 820 370"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+            <!-- IMPLEMENT -> STANDARDIZE -->
+
+            <path
+              d="M820 420
+                 C820 580 730 700 620 760"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+            <!-- STANDARDIZE -> MONITOR -->
+
+            <path
+              d="M550 820
+                 C470 860 380 860 300 820"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+            <!-- MONITOR -> ANALYZE -->
+
+            <path
+              d="M220 760
+                 C100 700 40 580 40 420"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+            <!-- ANALYZE -> REVIEW -->
+
+            <path
+              d="M40 360
+                 C70 250 150 170 320 130"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+            <!-- REVIEW -> PLAN -->
+
+            <path
+              d="M340 100
+                 C430 50 520 50 610 100"
+
+              stroke="#cbd5e1"
+              stroke-width="7"
+              fill="none"
+              marker-end="url(#arrowhead)"
+            />
+
+          </svg>
+
+          <!-- =====================================================
+               CENTER
+          ===================================================== -->
+
+          <div class="governance-center">
+
+            <h3>
+              Governança Contínua
+            </h3>
+
+            <p>
+
+              Gestão operacional baseada em melhoria contínua,
+              monitoramento de indicadores,
+              revisão periódica
+              e evolução sistemática dos processos.
+
+            </p>
+
+          </div>
+
+          <!-- =====================================================
+               STEPS
+          ===================================================== -->
+
+          <!-- PLANEJAR -->
+
+          <div class="gov-step plan">
+
+            <h4>
+              1. Planejar
+            </h4>
+
+            <p>
+
+              Identificar gargalos,
+              definir prioridades
+              e estruturar planos de ação.
+
+            </p>
+
+            <span>
+              DIAGNÓSTICO OPERACIONAL
+            </span>
+
+          </div>
+
+          <!-- IMPLEMENTAR -->
+
+          <div class="gov-step implement">
+
+            <h4>
+              2. Implementar
+            </h4>
+
+            <p>
+
+              Executar melhorias priorizadas
+              e aplicar ações corretivas
+              nos processos.
+
+            </p>
+
+            <span>
+              EXECUÇÃO DAS MELHORIAS
+            </span>
+
+          </div>
+
+          <!-- PADRONIZAR -->
+
+          <div class="gov-step standardize">
+
+            <h4>
+              3. Padronizar
+            </h4>
+
+            <p>
+
+              Atualizar procedimentos,
+              BPMN
+              e padrões operacionais.
+
+            </p>
+
+            <span>
+              PADRONIZAÇÃO
+            </span>
+
+          </div>
+
+          <!-- MONITORAR -->
+
+          <div class="gov-step monitor">
+
+            <h4>
+              4. Monitorar
+            </h4>
+
+            <p>
+
+              Acompanhar KPIs de SLA,
+              produtividade,
+              retrabalho
+              e eficiência operacional.
+
+            </p>
+
+            <span>
+              GESTÃO POR INDICADORES
+            </span>
+
+          </div>
+
+          <!-- ANALISAR -->
+
+          <div class="gov-step analyze">
+
+            <h4>
+              5. Analisar
+            </h4>
+
+            <p>
+
+              Avaliar tendências operacionais,
+              causas raiz
+              e impacto das melhorias.
+
+            </p>
+
+            <span>
+              ANÁLISE DE PERFORMANCE
+            </span>
+
+          </div>
+
+          <!-- REVISAR -->
+
+          <div class="gov-step review">
+
+            <h4>
+              6. Revisar
+            </h4>
+
+            <p>
+
+              Reavaliar continuamente os processos
+              para identificar novas oportunidades.
+
+            </p>
+
+            <span>
+              MELHORIA CONTÍNUA
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================
+           DIRETRIZES
+      ===================================================== -->
+
+      <div class="guidelines">
+
+        <h3>
+          Diretrizes de Governança Operacional
+        </h3>
+
+        <div class="guidelines-grid">
+
+          <div class="guideline-item">
+
+            <h4>
+              Reuniões Operacionais
+            </h4>
+
+            <p>
+
+              Realização periódica de reuniões
+              para acompanhamento dos indicadores
+              e evolução operacional.
+
+            </p>
+
+          </div>
+
+          <div class="guideline-item">
+
+            <h4>
+              Atualização BPMN
+            </h4>
+
+            <p>
+
+              Revisão contínua dos fluxos,
+              procedimentos
+              e padrões operacionais.
+
+            </p>
+
+          </div>
+
+          <div class="guideline-item">
+
+            <h4>
+              Gestão por Indicadores
+            </h4>
+
+            <p>
+
+              Monitoramento contínuo de SLA,
+              produtividade,
+              retrabalho
+              e conformidade operacional.
+
+            </p>
+
+          </div>
+
+          <div class="guideline-item">
+
+            <h4>
+              Lições Aprendidas
+            </h4>
+
+            <p>
+
+              Registro estruturado de oportunidades,
+              falhas operacionais
+              e melhorias implementadas.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* =====================================================
+TOP GRID
+===================================================== */
+
+.governance-top-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:24px;
+
+  margin-bottom:50px;
+
+}
+
+.governance-card{
+
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+
+  border-radius:24px;
+
+  padding:28px;
+
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+
+}
+
+.governance-card span{
+
+  display:inline-flex;
+
+  margin-bottom:18px;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  background:#dbeafe;
+
+  color:#2563eb;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.8px;
+
+}
+
+.governance-card h3{
+
+  font-size:24px;
+
+  line-height:1.4;
+
+  margin-bottom:14px;
+
+}
+
+.governance-card p{
+
+  color:#64748b;
+
+  line-height:1.9;
+
+  font-size:14px;
+
+}
+
+/* =====================================================
+CYCLE
+===================================================== */
+
+.governance-wrapper{
+
+  display:flex;
+
+  justify-content:center;
+
+  overflow:auto;
+
+  margin-bottom:50px;
+
+}
+
+.governance-cycle{
+
+  position:relative;
+
+  width:900px;
+
+  height:900px;
+
+}
+
+/* =====================================================
+SVG
+===================================================== */
+
+.cycle-svg{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  z-index:1;
+
+}
+
+/* =====================================================
+CENTER
+===================================================== */
+
+.governance-center{
+
+  position:absolute;
+
+  width:260px;
+
+  height:260px;
+
+  background:#0f172a;
+
+  border-radius:50%;
+
+  top:50%;
+
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  padding:28px;
+
+  color:white;
+
+  z-index:3;
+
+  box-shadow:0 15px 35px rgba(15,23,42,.18);
+
+}
+
+.governance-center h3{
+
+  font-size:28px;
+
+  margin-bottom:16px;
+
+}
+
+.governance-center p{
+
+  font-size:14px;
+
+  line-height:1.9;
+
+  color:rgba(255,255,255,.86);
+
+}
+
+/* =====================================================
+STEPS
+===================================================== */
+
+.gov-step{
+
+  position:absolute;
+
+  width:240px;
+
+  min-height:200px;
+
+  background:white;
+
+  border-radius:22px;
+
+  padding:24px;
+
+  box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+  z-index:2;
+
+  border-top:6px solid;
+
+}
+
+.gov-step h4{
+
+  margin-bottom:12px;
+
+  font-size:20px;
+
+}
+
+.gov-step p{
+
+  font-size:14px;
+
+  line-height:1.9;
+
+  color:#475569;
+
+  margin-bottom:16px;
+
+}
+
+.gov-step span{
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.6px;
+
+}
+
+/* =====================================================
+POSITIONS
+===================================================== */
+
+.plan{
+
+  top:10px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-color:#2563eb;
+
+}
+
+.plan h4,
+.plan span{
+
+  color:#2563eb;
+
+}
+
+.implement{
+
+  top:190px;
+
+  right:10px;
+
+  border-color:#16a34a;
+
+}
+
+.implement h4,
+.implement span{
+
+  color:#16a34a;
+
+}
+
+.standardize{
+
+  bottom:190px;
+
+  right:10px;
+
+  border-color:#d97706;
+
+}
+
+.standardize h4,
+.standardize span{
+
+  color:#d97706;
+
+}
+
+.monitor{
+
+  bottom:10px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-color:#dc2626;
+
+}
+
+.monitor h4,
+.monitor span{
+
+  color:#dc2626;
+
+}
+
+.analyze{
+
+  bottom:190px;
+
+  left:10px;
+
+  border-color:#7c3aed;
+
+}
+
+.analyze h4,
+.analyze span{
+
+  color:#7c3aed;
+
+}
+
+.review{
+
+  top:190px;
+
+  left:10px;
+
+  border-color:#0891b2;
+
+}
+
+.review h4,
+.review span{
+
+  color:#0891b2;
+
+}
+
+/* =====================================================
+GUIDELINES
+===================================================== */
+
+.guidelines{
+
+  margin-top:20px;
+
+}
+
+.guidelines h3{
+
+  margin-bottom:28px;
+
+  font-size:28px;
+
+}
+
+.guidelines-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:22px;
+
+}
+
+.guideline-item{
+
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+
+  border-radius:22px;
+
+  padding:24px;
+
+}
+
+.guideline-item h4{
+
+  margin-bottom:12px;
+
+  font-size:18px;
+
+}
+
+.guideline-item p{
+
+  color:#64748b;
+
+  line-height:1.9;
+
+  font-size:14px;
+
+}
+
+/* =====================================================
+RESPONSIVO
+===================================================== */
+
+@media(max-width:768px){
+
+  .governance-cycle{
+
+    transform:scale(.72);
+
+    transform-origin:top center;
+
+    height:700px;
+
+  }
+
+}
+
+</style>
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+<footer>
+
+  <h2>
+    Conclusão Executiva
+  </h2>
+
+  <p>
+
+    O diagnóstico operacional permitiu estruturar uma visão integrada da operação,
+    consolidando gargalos,
+    melhorias,
+    indicadores
+    e mecanismos de governança contínua,
+    fortalecendo a maturidade operacional da área de serviços
+    e criando base para evolução sustentável dos processos.
+
+  </p>
+
+</footer>
+
+</body>
+
+</html>
